@@ -1,7 +1,12 @@
 Clases
 
+<<<<<<< HEAD
   [1º Bachillerato](1bachillerato.html)
   
   [3º ESO](3ESO.html)
   
+=======
+  [1º Bachillerato"](1bachillerato.html)
+  [3º ESO](3ESO.html)
+>>>>>>> 7bb9fd2512d6fb61068fe709eac8a6ec6df7f995
   [2º ESO](2ESO.html)
