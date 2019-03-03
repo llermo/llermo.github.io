@@ -2,6 +2,7 @@ name: "Quillermico"
 output_dir: "."
 navbar:
   title: "Quillermico"
+  left:
     - text: "Home"
       href: index.html
     - text: "Bioinformática"

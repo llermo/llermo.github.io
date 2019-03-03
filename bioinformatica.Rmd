@@ -1,1 +1,44 @@
 Bioinformática
+
+---
+title: "Aplicar una función a un dataframe"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+Este script es una muestra de como se aplica una función a un data frame. 
+
+Creamos el data frame
+```{r}
+a<-c(10,20)
+b<-c(3,6)
+df<-data.frame(a,b)
+df
+```
+
+Creamos una función sencilla: 
+```{r}
+fp=function(x){sum(x)}
+```
+
+Y aplicamos la función al data frame primero por filas
+```{r}
+rpf<-apply(df, 1,fp)
+rpf
+```
+Cuyo resultado es un vector 
+```{r}
+ is.vector((rpf))
+```
+
+Y luego por columnas
+```{r}
+rpc<-apply(df, 2,fp)
+rpc
+```
+Cuyo resultado es otro vector 
+```{r}
+ is.vector((rpc))
+```
+

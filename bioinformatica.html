@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>Aplicar una función a un dataframe</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -274,7 +274,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My Website</a>
+      <a class="navbar-brand" href="index.html">Quillermico</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -282,10 +282,13 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="bioinformatica.html">Bioinformática</a>
 </li>
 <li>
-  <a href="contenidos.html">Contenidos</a>
+  <a href="mindfulness.html">Mindfulness</a>
+</li>
+<li>
+  <a href="clases.html">Clases</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -299,11 +302,38 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Aplicar una función a un dataframe</h1>
 
 </div>
 
 
 <p>Bioinformática</p>
+<p>Este script es una muestra de como se aplica una función a un data frame.</p>
+<p>Creamos el data frame</p>
+<pre class="r"><code>a&lt;-c(10,20)
+b&lt;-c(3,6)
+df&lt;-data.frame(a,b)
+df</code></pre>
+<pre><code>##    a b
+## 1 10 3
+## 2 20 6</code></pre>
+<p>Creamos una función sencilla:</p>
+<pre class="r"><code>fp=function(x){sum(x)}</code></pre>
+<p>Y aplicamos la función al data frame primero por filas</p>
+<pre class="r"><code>rpf&lt;-apply(df, 1,fp)
+rpf</code></pre>
+<pre><code>## [1] 13 26</code></pre>
+<p>Cuyo resultado es un vector</p>
+<pre class="r"><code> is.vector((rpf))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Y luego por columnas</p>
+<pre class="r"><code>rpc&lt;-apply(df, 2,fp)
+rpc</code></pre>
+<pre><code>##  a  b 
+## 30  9</code></pre>
+<p>Cuyo resultado es otro vector</p>
+<pre class="r"><code> is.vector((rpc))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 
 
 
