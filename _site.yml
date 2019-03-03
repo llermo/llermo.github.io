@@ -1,14 +1,15 @@
-name: "my-website"
+name: "Quillermico"
 output_dir: "."
 navbar:
-  title: "My Website"
-  left:
+  title: "Quillermico"
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Contenidos"
-      href: contenidos.html
+    - text: "Bioinformática"
+      href: bioinformatica.html
+    - text: "Mindfulness"
+      href: mindfulness.html
+    - text: "Clases"
+      href: clases.html
 output:
   html_document:
     theme: united
