@@ -1,1 +1,6 @@
 Clases
+
+    - text: "1º Bachillerato"
+      href: 1bachillerato.html
+    - text: "3º ESO"
+      href: 3ESO.html
